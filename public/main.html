@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overflow: hidden; /* Hide scrollbars */
+      }
+      .main {
+        height: 100svh;
+        width: 100svw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        background-image: url("./pngtree-aesthetic-plain-background-with-pastel-colors-image_913186.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .options {
+        max-width: 400px;
+        height: 120px;
+        display: flex;
+        justify-content: space-around;
+        background-color: rgba(255, 183, 13, 0.5);
+        border-radius: 20px;
+        font-size: 1.2rem;
+        gap: 100px;
+        padding: 20px;
+      }
+      #pre-next {
+        min-width: 30svw;
+        align-items: center;
+      }
+      #pre-next {
+        display: flex;
+        justify-content: space-between;
+
+        text-align: center;
+        transform: translate(1px, -100px);
+      }
+
+      .question-container {
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .prenextbtn {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        font-weight: bold;
+        background-color: rgba(254, 82, 82, 0.5);
+        transform: translate(0px, 80px);
+      }
+
+      .prenextbtn:active {
+        background-color: beige;
+      }
+
+      .optBtn {
+        width: 120px;
+        height: 30px;
+        border-radius: 4px;
+        background-color: aquamarine;
+        border: 0.1px solid black;
+        margin-top: 7px;
+        font-weight: 600;
+      }
+
+      .optBtn:focus {
+        background-color: wheat;
+      }
+      .optBtn.disabled {
+        background-color: aquamarine;
+        cursor: not-allowed;
+      }
+      img {
+        transform: translate(0px, 80px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1 id="welcome">Welcome</h1>
+      <h2 id="timer"></h2>
+      <div id="pre-next">
+        <button class="prenextbtn" id="preBtn" onclick="preBtn()">
+          <span>Pre</span>
+        </button>
+
+        <img src="./download.png" alt="" height="350px" />
+
+        <button class="prenextbtn" id="nextBtn" onclick="nextBtn()">
+          <span id="span">Next</span>
+        </button>
+      </div>
+      <h2 id="score"></h2>
+      <div id="question-container" class="question-container">
+        <h2 id="h2">Question is not questioning?</h2>
+        <div class="options">
+          <div>
+            <button class="optBtn" id="optionA"></button>
+            <button class="optBtn" id="optionB"></button>
+          </div>
+          <div>
+            <button class="optBtn" id="optionC"></button>
+            <button class="optBtn" id="optionD"></button>
+          </div>
+          
+        </div>
+      </div>
+      <button id=""z></button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
